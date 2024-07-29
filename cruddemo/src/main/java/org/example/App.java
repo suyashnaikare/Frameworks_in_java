@@ -22,6 +22,21 @@ public class App
         try{
             manager.getTransaction().begin();
 
+            studentdetails std_details = new studentdetails();
+            std_details.setCollege("IIT");
+            std_details.setMajors("Computer Science");
+
+
+            student std = new student();
+            std.setFname("Rahul");
+            std.setLname("Kumar");
+            std.setEmail("rahulk@gmail.com");
+            std.setStudentdetails(std_details);
+
+            manager.persist(std);
+
+
+
             // Find cities using HQL
 //            TypedQuery<City> query = manager.createQuery("From City c Where c.population > 1000000", City.class);
 //            List<City> result = query.getResultList();

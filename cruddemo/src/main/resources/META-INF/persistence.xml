@@ -27,7 +27,7 @@
             create-tables: Only the tables will be created if they do not already exist. No tables will be dropped.
             drop: The database schema will be dropped when the application is undeployed.
             -->
-            <property name="jakarta.persistence.schema-generation.database.action" value="none" />
+            <property name="jakarta.persistence.schema-generation.database.action" value="create" />
             <property name="hibernate.dialect"    value="org.hibernate.dialect.MySQLDialect" />
         </properties>
     </persistence-unit>
